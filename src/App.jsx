@@ -27,19 +27,19 @@ function App() {
   // Puedes ver la variable data en consola.
   console.log(data);
   return (
-    <>
-    {/* Aquí te dejo un ejemplo de cómo podrías imprimir varios elementos a la vez. */}
-      {
-        data.map((el, i) => 
-       <div className="contenedor">
-
-        <Card key={ i}  url={el.photo} superHost ={el.superHost} type={el.type} rating={el.rating} title={el.title}/>
-       </div>
-          
-        )
-        
-      }
-    </>
+    <section className="contenedor">
+        {/* Aquí te dejo un ejemplo de cómo podrías imprimir varios elementos a la vez. */}
+      <div className="contenedor-cajas">
+        <h1>Stays in Finland</h1>
+            <div className="work__projects">   
+                {
+                  data.map((el, i) =><Card key={ i}  url={el.photo} superHost ={el.superHost} type={el.type} rating={el.rating} title={el.title}/>)
+                  
+                }
+            </div>
+       
+      </div>
+    </section>
   );
 }
 

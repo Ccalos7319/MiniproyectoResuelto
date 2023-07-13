@@ -4,12 +4,26 @@ const Card = ({superHost,url,type,rating,title}) => {
   
   return (
     
-    <article className="project">
-    <img src={url} alt="imagen-proyecto" />
-    <p>{superHost}</p>
-    <p>{type}</p>
-    <p><img className="star"src="src/img/bx-star.svg" alt="" />{rating}</p>
-    <p>{title}</p>
+    <article className="contenedorPrincipal">
+
+       
+          <img src={url} alt="imagen-proyecto" />
+        
+        <div className="informacionPrincipal">
+            <p>{superHost}</p>
+            <p>{type}</p>
+            <div className="informacionRating">
+              <img className="star"src="src/img/bx-star.svg" alt="" />
+              <p>{rating}</p>
+            </div>
+            
+        </div>
+         
+          <p>{title}</p>
+        
+        
+    
+      
     </article>
   
   )

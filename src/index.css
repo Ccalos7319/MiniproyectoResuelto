@@ -1,9 +1,43 @@
-img {
-    width: 395px;
-    height: 269px;
-}
-.star{
-    width: 24px;
-    height: 24px;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
  
+}
+h1{
+  padding-bottom: 32px;
+}
+img {
+  width: 395px;
+  height: 269px;
+  border-radius: 24px;
+}
+.star {
+  width: 24px;
+  height: 24px;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.contenedor-cajas {
+  height: 730px;
+  overflow-y: scroll;
+}
+.work__projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.2rem;
+}
+.informacionPrincipal{
+ display: flex;
+ justify-content: space-between;
+ 
+}
+.informacionRating{
+  display: flex;
+  align-items: center;
 }
