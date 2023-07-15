@@ -7,7 +7,7 @@ const Card = ({superHost,url,type,rating,title}) => {
     <article className="contenedorPrincipal">
 
        
-          <img src={url} alt="imagen-proyecto" />
+          <img className="ImageRoom" src={url} alt="imagen-proyecto" />
         
         <div className="informacionPrincipal">
             <p>{superHost}</p>
