@@ -1,60 +1,95 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
- 
 }
-.contenedorPrincipalNav{
+.contenedorPrincipalNav {
   display: flex;
   align-items: center;
-  justify-content:space-evenly ;
- 
+  justify-content: space-evenly;
 }
 .contenedorInputs {
   display: flex;
   align-items: center;
+  font-family: 'Mulish', sans-serif;
 }
-h1{
+
+h1 {
   padding-bottom: 32px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  line-height: normal;
 }
 .ImageRoom {
   width: 395px;
   height: 269px;
   border-radius: 24px;
 }
+.superhost {
+  border: 1px solid #4f4f4f;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 100px;
+  height: 28px;
+}
+.typeBeds {
+  display: flex;
+  align-items: center;
+  color: var(--gray-3, #828282);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
 .star {
   width: 24px;
   height: 24px;
-  
 }
-
-
 .contenedor {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-family: "Montserrat", sans-serif;
 }
 .contenedor-cajas {
-  height: 730px;
-  overflow-y: scroll;
+  height: 740px;
+  overflow-y: hidden;
+  
 }
 .work__projects {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2.2rem;
 }
-.informacionPrincipal{
- display: flex;
- justify-content: space-between;
- 
+.informacionPrincipal {
+  display: flex;
+  justify-content: space-between;
 }
-.informacionRating{
+.informacionRating {
   display: flex;
   align-items: center;
-  
+}
+.foot {
+  font-family: "Montserrat", sans-serif;
+  color: #828282;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 40px;
 }

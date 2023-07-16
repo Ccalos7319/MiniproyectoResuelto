@@ -13,7 +13,7 @@ function Nav({handleChange}) {
             <input
               onChange={handleChange} 
               type="text"
-              placeholder="Type here"
+              placeholder=" "
               className="input input-bordered w-full max-w-xs"
             />
             <label className="label"></label>
@@ -22,7 +22,7 @@ function Nav({handleChange}) {
             <div className="input-group">
               <input
                 type="text"
-                placeholder="Search…"
+                placeholder="Add guests"
                 className="input input-bordered"
               />
               <button className="btn btn-square">

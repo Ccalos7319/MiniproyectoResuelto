@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Card from "./Componentes/Card";
 import Nav from "./Componentes/Nav";
+import Foot from "./Componentes/Foot";
 
 
 function App() {
@@ -53,14 +54,19 @@ function App() {
       <div className="contenedor-cajas">
         <h1>Stays in Finland</h1>
             <div className="work__projects">   
+                {/* {
+                  data.map((el, i) =><Card key={ i}  url={el.photo} superHost ={el.superHost &&<span className="superhost">SUPER HOST </span> } type={el.type} beds={el.beds}rating={el.rating} title={el.title}/>)
+                  
+                } */}
                 {
-                  filtered.map((el, i) =><Card key={ i}  url={el.photo} superHost ={el.superHost} type={el.type} rating={el.rating} title={el.title}/>)
+                  filtered.map((el, i) =><Card key={ i}  url={el.photo} superHost ={el.superHost &&<span className="superhost">SUPER HOST </span> } type={el.type} beds={el.beds}rating={el.rating} title={el.title}/>)
                   
                 }
             </div>
        
       </div>
     </section>
+    <Foot />
     </>
     
   );
