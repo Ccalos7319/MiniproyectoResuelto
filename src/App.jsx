@@ -18,6 +18,7 @@ function App() {
       const resJson = await res.json();
       // Aquí guardamos los datos de "stays.json" en la variable data.
       setData(resJson);
+     
     } catch (error) {
       console.log(error);
     }
@@ -34,7 +35,9 @@ function App() {
 
 
   const [filtered, setFiltered] = useState(data);
+  
   const handleChange =(e) => {
+
     let keyWord = e.target.value.toLowerCase();
       let arr = data.filter( apartament => {
         let name =apartament.city.toLowerCase();
@@ -44,24 +47,58 @@ function App() {
       setFiltered(arr);
  
   }
+  const handleGuestsChange =(e) => {
 
+    let guests = e.target.value.trim() !== "" ? parseInt(e.target.value) : undefined;
+      let filteredByGuests= filtered.filter( apartament => {
+        return  apartament.maxGuests >= guests;
+      })
+      setFiltered(filteredByGuests);
+ 
+  }
+
+if (filtered.length === 0){
   return (
     <>
-     <Nav handleChange={handleChange} />
+     <Nav handleChange={handleChange}handleGuestsChange={handleGuestsChange} />
     <section className="contenedor">
         {/* Aquí te dejo un ejemplo de cómo podrías imprimir varios elementos a la vez. */}
        
       <div className="contenedor-cajas">
         <h1>Stays in Finland</h1>
             <div className="work__projects">   
-                {/* {
-                  data.map((el, i) =><Card key={ i}  url={el.photo} superHost ={el.superHost &&<span className="superhost">SUPER HOST </span> } type={el.type} beds={el.beds}rating={el.rating} title={el.title}/>)
-                  
-                } */}
+               
                 {
-                  filtered.map((el, i) =><Card key={ i}  url={el.photo} superHost ={el.superHost &&<span className="superhost">SUPER HOST </span> } type={el.type} beds={el.beds}rating={el.rating} title={el.title}/>)
+                  data.map((el, i) =><Card key={ i} city={el.city} url={el.photo} superHost ={el.superHost &&<span className="superhost">SUPER HOST </span> } type={el.type} beds={el.beds}rating={el.rating} title={el.title}/>)
                   
                 }
+               
+            </div>
+       
+      </div>
+    </section>
+    <Foot />
+    </>
+    
+  );
+}
+
+
+  return (
+    <>
+     <Nav handleChange={handleChange}handleGuestsChange={handleGuestsChange} />
+    <section className="contenedor">
+        {/* Aquí te dejo un ejemplo de cómo podrías imprimir varios elementos a la vez. */}
+       
+      <div className="contenedor-cajas">
+        <h1>Stays in Finland</h1>
+            <div className="work__projects">   
+               
+                {
+                  filtered.map((el, i) =><Card key={ i} city={el.city} url={el.photo} superHost ={el.superHost &&<span className="superhost">SUPER HOST </span> } type={el.type} beds={el.beds}rating={el.rating} title={el.title}/>)
+                  
+                }
+               
             </div>
        
       </div>

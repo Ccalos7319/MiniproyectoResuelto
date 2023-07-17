@@ -1,4 +1,4 @@
-function Nav({handleChange}) {
+function Nav({handleChange,handleGuestsChange}) {
   return (
     <>
       <nav className="contenedorPrincipalNav">
@@ -21,6 +21,7 @@ function Nav({handleChange}) {
           <div className="form-control">
             <div className="input-group">
               <input
+                 onChange={handleGuestsChange}
                 type="text"
                 placeholder="Add guests"
                 className="input input-bordered"
