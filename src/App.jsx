@@ -61,6 +61,7 @@ function App() {
 
           <div className="contenedor-cajas">
             <h1>Stays in Finland</h1>
+            <h1>12+</h1>
             <div className="work__projects">
               {data.map((el, i) => (
                 <Card
